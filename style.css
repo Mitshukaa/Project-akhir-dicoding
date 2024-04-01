@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,26 +10,27 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
-:root{
+
+:root {
     --bg-color: #222831;
     --second-bg-color: #31363F;
     --text-color: #fff;
     --main-color: #76ABAE;
-    --body-font :font-family: "Poppins", sans-serif;
+    --body-font: font-family: "Poppins", sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-body{
+body {
     background: #7b4bb7;
     font-family: var(--body-font);
     color: var(--text-color);
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -64,7 +66,7 @@ body{
     -o-transform: scale(1.1);
 }
 
-.navbar a{
+.navbar a {
     font-size: 1.8rem;
     color: var(--text-color);
     margin-left: 4rem;
@@ -83,8 +85,59 @@ body{
     border-bottom: 3px solid var(--main-color);
 }
 
-#menu-icon{
+#menu-icon {
     font-size: 3.6rem;
     color: var(--main-color);
     display: none;
+}
+
+/* Breakpoint */
+@media (max-width:995px) {
+    #menu-icon {
+        display: block;
+        width: 30px; /* Sesuaikan dengan ukuran logo */
+        height: 30px; /* Sesuaikan dengan ukuran logo */
+        cursor: pointer;
+      }
+      
+      .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--second-bg-color);
+        border-bottom-left-radius: 2rem;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.4);
+        display: none; /* Navbar disembunyikan secara default */
+      }
+      
+      .navbar.active {
+        display: block; /* Navbar ditampilkan ketika memiliki kelas active */
+      }
+      
+      /* CSS lainnya seperti sebelumnya */
+      
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .navbar a:hover,
+    .navbar a:active {
+        border-bottom: 0.5rem solid var(--main-color);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+}
+
+.hero-section {
+    min-height: 100vh;
 }
