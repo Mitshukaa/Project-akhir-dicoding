@@ -17,6 +17,9 @@
     --text-color: #fff;
     --main-color: #76ABAE;
     --body-font: font-family: "Poppins", sans-serif;
+    --dark-background: #000 /* rgb(55, 57, 58) */;
+    --primary-color: #76ABAE;
+    --secondary-color: #7ed4d8;
 }
 
 html {
@@ -25,7 +28,7 @@ html {
 }
 
 body {
-    background: #7b4bb7;
+    background: var(--bg-color);
     font-family: var(--body-font);
     color: var(--text-color);
 }
@@ -95,12 +98,14 @@ body {
 @media (max-width:995px) {
     #menu-icon {
         display: block;
-        width: 30px; /* Sesuaikan dengan ukuran logo */
-        height: 30px; /* Sesuaikan dengan ukuran logo */
+        width: 30px;
+        /* Sesuaikan dengan ukuran logo */
+        height: 30px;
+        /* Sesuaikan dengan ukuran logo */
         cursor: pointer;
-      }
-      
-      .navbar {
+    }
+
+    .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -109,15 +114,17 @@ body {
         background: var(--second-bg-color);
         border-bottom-left-radius: 2rem;
         border-top: 0.1rem solid rgba(0, 0, 0, 0.4);
-        display: none; /* Navbar disembunyikan secara default */
-      }
-      
-      .navbar.active {
-        display: block; /* Navbar ditampilkan ketika memiliki kelas active */
-      }
-      
-      /* CSS lainnya seperti sebelumnya */
-      
+        display: none;
+        /* Navbar disembunyikan secara default */
+    }
+
+    .navbar.active {
+        display: block;
+        /* Navbar ditampilkan ketika memiliki kelas active */
+    }
+
+    /* CSS lainnya seperti sebelumnya */
+
 
     .navbar a {
         display: block;
@@ -138,6 +145,128 @@ body {
     }
 }
 
-.hero-section {
-    min-height: 100vh;
+/* hero section */
+
+.hero_section {
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    
+}
+
+.hero-kiri{
+    max-width: 500px;
+}
+
+
+.hero-kiri h1{
+    font-size: 56px;
+    font-weight: 600px;
+}
+
+.hero-kiri p{
+    font-size: 16px;
+}
+
+
+.hero-kiri .btn {
+    background-color: transparent;    
+    border: solid 3px var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.8rem 1.8rem;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    box-shadow: 0px 0px 10px 0px var(--secondary-color);
+    transition: all 300ms ease;
+}
+
+.hero-kiri .btn:hover {
+    box-shadow: 0px 0px 20px 0px var(--secondary-color);
+    color: whitesmoke;
+    background-image: linear-gradient(60deg, var(--primary-color), var(--secondary-color));
+}
+
+.hero-kanan{
+    width: 410px;
+    height: 410px;
+
+}
+
+.hero-kanan .lingkaran{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-kanan .lingkaran::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.image img{
+    max-width: 300px;
+    object-fit: cover;
+    position: absolute;
+    overflow: hidden;
+
+}
+
+.lingkaran .image{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content:center ;
+    border: 8px solid #eeeeee ;
+    align-items: center;
+}
+
+@media screen and (max-width: 995px) {
+    .hero_section {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 200px;
+        padding-bottom: 20px; /* tambahkan padding atas lebih besar */
+    }
+
+    .hero_kiri, .hero_kanan {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero_kanan {
+        margin-bottom: 30px;
+    }
+
+    .hero_kiri {
+        margin-top: 40px;
+    }
+
+    .hero-kiri h1{
+        font-size: 36px;
+    }
+
+    .hero_kiri .btn {
+        font-size: 14px;
+    }
 }
