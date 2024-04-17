@@ -20,7 +20,7 @@
     --dark-background: #000 /* rgb(55, 57, 58) */;
     --primary-color: #76ABAE;
     --secondary-color: #7ed4d8;
-    --nav:#0C0C0C;
+    --nav:#0a0909;
 }
 
 html {
@@ -40,7 +40,7 @@ body {
     left: 0;
     width: 100%;
     padding: 3rem 9%;
-    background: var(--second-bg-color);
+    background: var(--nav);
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
@@ -173,7 +173,7 @@ body {
 }
 
 
-.perkenalan .btn {
+.btn {
     background-color: transparent;    
     border: solid 3px var(--primary-color);
     color: var(--primary-color);
@@ -187,7 +187,7 @@ body {
     transition: all 300ms ease;
 }
 
-.perkenalan .btn:hover {
+.btn:hover {
     box-shadow: 0px 0px 20px 0px var(--secondary-color);
     color: whitesmoke;
     background-image: linear-gradient(60deg, var(--primary-color), var(--secondary-color));
@@ -313,20 +313,20 @@ body {
     justify-content: center;
     height: 100vh;
     display: flex;
-    gap: 10rem;
+    gap: 8rem;
     align-items: center;
     padding: 70px 10% 0;
 }
 
 .tentang_saya .foto-diri img{
-    width: 600px;
+    width: 500px;
     box-shadow: 9px 8px 34px -5px rgba(0, 0, 0, 0.59);
     -webkit-box-shadow: 9px 8px 34px -5px rgba(0, 0, 0, 0.59);
     -moz-box-shadow: 9px 8px 34px -5px rgba(0, 0, 0, 0.59);
 }
 
 .saya .heading{
-    text-align: center;
+    text-align: start;
     font-size: 8rem;
 }
 
@@ -340,13 +340,193 @@ body {
     line-height: 1.5;
 }
 
-.saya h3{
-    font-size: 2.6rem;
-}
-
 .saya p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
 
 
+@media screen and (max-width: 995px) {
+    .tentang_saya {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .foto-diri img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        image-rendering: auto;
+    }
+
+    .saya .heading{
+        text-align: center;
+        font-size: 6rem;
+    }
+
+    .foto-diri {
+        margin-bottom: 10px;
+    }
+
+    .saya {
+        text-align: center;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 1.2em;
+    }
+
+    .saya p {
+        font-size: 1.3em;
+    }
+}
+
+
+/* kontak saya */
+    .kontak-saya{
+        background-color: var(--second-bg-color);
+        width: 100%;
+        height: 100vh;
+        padding-top: 110px;
+    }
+
+    .kontak-saya .heading{
+        text-align: center;
+        font-size: 5rem;
+    }
+    
+    .kontak-saya h2 span{
+        color: var(--main-color);
+        text-shadow: 0 0 50px var(--main-color);
+    }
+
+    .kontak-saya form{
+        max-width: 70rem;
+        margin: 1rem auto;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .kontak-saya form .input-box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .kontak-saya form .input-box input,
+    .kontak-saya form textarea{
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        color: var(--main-color);
+        background-color: var(--second-bg-color);
+        border-radius: 0.8rem;
+        border: 2px solid var(--main-color);
+        margin: 1rem 0;
+        resize: none;
+        -webkit-border-radius: 0.8rem;
+        -moz-border-radius: 0.8rem;
+        -ms-border-radius: 0.8rem;
+        -o-border-radius: 0.8rem;
+}
+
+@media screen and (max-width: 995px) {
+    .kontak-saya .heading {
+        font-size: 3rem;
+    }
+
+    .kontak-saya{
+        height: 90vh
+    }
+
+    .kontak-saya form {
+        max-width: 90%;
+    }
+
+    .kontak-saya form .input-box input,
+    .kontak-saya form textarea {
+        font-size: 1.2rem;
+    }
+}
+
+/* footer */
+    .footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding: 40px 0;
+        background-color: var(--bg-color);
+    }
+
+    .footer .sosial-icons{
+        text-align: center;
+        padding-bottom: 25px;
+        color: var(--main-color);
+    }
+
+    .footer .sosial-icons a{
+        font-size: 24px;
+        color: inherit;
+        border: 1px solid var(--main-color);
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 10px;
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -ms-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+}
+
+.sosial-icons a:hover {
+    box-shadow: 0px 0px 20px 0px var(--secondary-color);
+    transform: scale(1.1)translateY(-5px);
+    color: whitesmoke;
+    background-image: linear-gradient(60deg, var(--primary-color), var(--secondary-color));
+    -webkit-transform: scale(1.1)translateY(-5px);
+    -moz-transform: scale(1.1)translateY(-5px);
+    -ms-transform: scale(1.1)translateY(-5px);
+    -o-transform: scale(1.1)translateY(-5px);
+}
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.footer ul li {
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.footer .copyright{
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 50px;
+}
