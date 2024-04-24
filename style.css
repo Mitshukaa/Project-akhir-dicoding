@@ -383,6 +383,73 @@ body {
     }
 }
 
+/* skill */
+.skill_section {
+    margin-top: 30px;
+    width: 100%;
+    height: 80vh;
+    padding: 70px 10% 0;
+}
+
+.semua-skill {
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.skill_section .heading {
+    text-align: center;
+    font-size: 6rem;
+    padding-bottom: 20px;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.skill_section .skill {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+}
+.skill_section .skill h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #333;
+
+}
+
+.skill_section progress {
+    flex: 1;
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+    border-radius: 10px; 
+    -webkit-appearance: none;
+    appearance: none; 
+}
+
+
+.skill_section .skill .progress-label {
+    color: black;
+    font-size: 12px;
+    margin-left: 96%;
+}
+
+/* Gaya untuk progress yang telah diatur */
+.skill_section .skill progress::-webkit-progress-bar {
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+}
+
+.skill_section .skill progress::-webkit-progress-value {
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+
 
 /* kontak saya */
     .kontak-saya{
